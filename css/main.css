@@ -54,7 +54,7 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 .backdrop.is-hidden {
-  opacity: 1;
+  opacity: 0;
   pointer-events: none;
 }
 .modal {
@@ -63,7 +63,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 528px;
+  width: 100%;
+  max-width: 528px;
   height: 581px;
 
   background: var(--primary-bg-color);
@@ -154,10 +155,7 @@
   font-size: 14px;
   line-height: 1.71;
 }
-.features .image:hover,
-.features .image:focus {
-  background-color: #2196f3;
-}
+
 
 /* Activity */
 .activity .container {
@@ -219,18 +217,7 @@ line-height: 1.14;
   font-size: 16px;
   line-height: 1.19;
 }
-.worker .item {
-  background-color: var(--primary-bg-color);
-}
 
-.team .list.link:hover,
-.team .list.link:focus {
-  color: var(--accent-color);
-}
-.team .text {
-  font-weight: 400;
-  text-align: center;
-}
 .worker {
   display: flex;
   margin-top: 50px;
@@ -238,6 +225,7 @@ line-height: 1.14;
 .worker .item {
   padding 0;
   width: calc((100%-30 * 3) / 4);
+  background-color: var(--primary-bg-color);
 }
 .worker .item:not(:last-child) {
   margin-right: 30px;
@@ -259,14 +247,19 @@ line-height: 1.14;
   border: none;
   width: 44px;
   height: 44px;
+
   color: #AFB1B8;;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-socials {
   fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.socials-link:hover {
+.socials-link:hover,
+.socials-link:focus {
   background-color: var(--accent-color);
 }
 .socials-link:hover .icon-socials {
@@ -298,14 +291,20 @@ line-height: 1.14;
   border: none;
   width: 170px;
   height: 90px;
+
   color: var(--clients-link-color);
   border: 1px solid var(--clients-link-color);
   border-radius: 4px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-clients {
   fill: currentColor;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.clients-link:hover {
+.clients-link:hover,
+.clients-link:focus {
   border-color: var(--accent-color);
 }
 .clients-link:hover .icon-clients {
