@@ -115,9 +115,8 @@ img {
   margin-right: 50px;
 }
 .site-nav .link {
-  display: flex;
   padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 33px;
 
   color: var(--title-text-color);
 
